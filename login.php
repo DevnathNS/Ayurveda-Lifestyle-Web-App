@@ -1,9 +1,5 @@
 <?php
-session_start();
-if(isset($_SESSION['user_id'])) {
-    header("Location: user_dashboard.php");
-    exit;
-}
+require_once('session_start.php');
 include('db_config.php');
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
