@@ -1,6 +1,5 @@
 <?php
-session_start();
-session_destroy();
+require_once('session_start.php');
 ?>
 
 <!DOCTYPE html>
