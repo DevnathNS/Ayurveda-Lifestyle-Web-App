@@ -2,22 +2,30 @@
 require_once('session_start.php');
 include('db_config.php');
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+    $hashed_password = md5($password);
+
+    $query = "SELECT * FROM users WHERE username = '$username'";
     $result = mysqli_query($conn, $query);
 
-    if(mysqli_num_rows($result) == 1) {
+    if ($result && mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
-        $_SESSION['user_id'] = $row['id'];
-        if($row['role'] == 'admin') {
-            header("Location: admin/admin_dashboard.php");
+        $stored_password = $row['password'];
+
+        if ($stored_password === $hashed_password) {
+            $_SESSION['user_id'] = $row['id'];
+            if ($row['role'] == 'admin') {
+                header("Location: admin/admin_dashboard.php");
+            } else {
+                header("Location: user/user_dashboard.php");
+            }
+            exit;
         } else {
-            header("Location: user/user_dashboard.php");
+            $error = "Invalid username or password";
         }
-        exit;
     } else {
         $error = "Invalid username or password";
     }
@@ -33,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
     <div class="login-container">
         <h2>Login</h2>
-        <?php if(isset($error)) { ?>
+        <?php if (isset($error)) { ?>
             <p><?php echo $error; ?></p>
         <?php } ?>
         <form method="post">
