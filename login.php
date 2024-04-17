@@ -6,7 +6,6 @@ if(isset($_SESSION['user_id'])) {
 }
 include('db_config.php');
 
-// Login form submission
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -18,9 +17,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = mysqli_fetch_assoc($result);
         $_SESSION['user_id'] = $row['id'];
         if($row['role'] == 'admin') {
-            header("Location: admin_dashboard.php");
+            header("Location: admin/admin_dashboard.php");
         } else {
-            header("Location: user_dashboard.php");
+            header("Location: user/user_dashboard.php");
         }
         exit;
     } else {
