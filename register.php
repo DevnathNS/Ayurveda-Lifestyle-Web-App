@@ -10,9 +10,9 @@ include('db_config.php');
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    // Other registration fields...
+    $email = $_POST['email']; // New email field
 
-    $query = "INSERT INTO users (username, password, role) VALUES ('$username', '$password', 'user')";
+    $query = "INSERT INTO users (username, password, email, role) VALUES ('$username', '$password', '$email', 'user')";
     if(mysqli_query($conn, $query)) {
         header("Location: login.php");
         exit;
@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="post">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
-            <!-- Other registration fields... -->
+            <input type="email" name="email" placeholder="Email" required> <!-- New email field -->
             <button type="submit">Register</button>
         </form>
         <p>Already have an account? <a href="login.php">Login</a></p>
