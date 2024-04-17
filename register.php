@@ -6,11 +6,10 @@ if(isset($_SESSION['user_id'])) {
 }
 include('db_config.php');
 
-// Registration form submission
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $email = $_POST['email']; // New email field
+    $email = $_POST['email'];
 
     $query = "INSERT INTO users (username, password, email, role) VALUES ('$username', '$password', '$email', 'user')";
     if(mysqli_query($conn, $query)) {
@@ -37,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="post">
             <input type="text" name="username" placeholder="Username" required>
             <input type="password" name="password" placeholder="Password" required>
-            <input type="email" name="email" placeholder="Email" required> <!-- New email field -->
+            <input type="email" name="email" placeholder="Email" required>
             <button type="submit">Register</button>
         </form>
         <p>Already have an account? <a href="login.php">Login</a></p>
