@@ -6,7 +6,6 @@ if(isset($_SESSION['user_id'])) {
 }
 include('db_config.php');
 
-// Registration form submission
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
