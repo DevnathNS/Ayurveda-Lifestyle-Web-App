@@ -2,22 +2,13 @@
 session_start();
 include('../db_config.php');
 
-// Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../login.php");
     exit;
 }
 
-// Check user's role
-if ($_SESSION['role'] !== 'user') {
-    header("Location: ../admin/admin_dashboard.php");
-    exit;
-}
-
-// Handle dropdown selection
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['dosha'])) {
     $dosha = $_POST['dosha'];
-    // Redirect to corresponding recipes page based on dosha
     if ($dosha === 'vata') {
         header("Location: vata_recipes.php");
         exit;
