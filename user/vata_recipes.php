@@ -12,7 +12,7 @@
         .carousel-item img {
             width: 100%;
             height: auto;
-            max-height: 400px;
+            max-height: 400px; 
             object-fit: cover;
         }
 
@@ -36,8 +36,7 @@
             <div class="carousel-item active">
                 <img src="vata_recipe1.jpg" class="d-block w-100" alt="Recipe 1">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Recipe 1 Title</h5>
-                    <p>Short description of Recipe 1</p>
+                    <h5>Breakfast Smoothie</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal1">
                         View Recipe
                     </button>
@@ -46,8 +45,7 @@
             <div class="carousel-item">
                 <img src="vata_recipe2.jpg" class="d-block w-100" alt="Recipe 2">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Recipe 2 Title</h5>
-                    <p>Short description of Recipe 2</p>
+                    <h5>Warm Root Vegetable Soup</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal2">
                         View Recipe
                     </button>
@@ -56,8 +54,7 @@
             <div class="carousel-item">
                 <img src="vata_recipe3.jpg" class="d-block w-100" alt="Recipe 3">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Recipe 3 Title</h5>
-                    <p>Short description of Recipe 3</p>
+                    <h5>Coconut Quinoa Porridge</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal3">
                         View Recipe
                     </button>
@@ -86,7 +83,7 @@
             </div>
             <div class="modal-body">
                 <img src="vata_recipe1.jpg" class="d-block mx-auto mb-3" alt="Recipe 1 Full">
-                <p>Full Recipe 1 details here...</p>
+                <p>Ingredients: Banana, almond milk, dates, ground flaxseed, cinnamon.<br><br>Directions: Blend all ingredients until smooth. Enjoy for a nourishing breakfast.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -106,7 +103,7 @@
             </div>
             <div class="modal-body">
                 <img src="vata_recipe2.jpg" class="d-block mx-auto mb-3" alt="Recipe 2 Full">
-                <p>Full Recipe 2 details here...</p>
+                <p>Ingredients: Carrots, sweet potatoes, parsnips, ginger, turmeric, vegetable broth.<br><br>Directions: Sauté chopped vegetables with ginger and turmeric, then simmer in vegetable broth until tender. Blend until smooth.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -126,7 +123,7 @@
             </div>
             <div class="modal-body">
                 <img src="vata_recipe3.jpg" class="d-block mx-auto mb-3" alt="Recipe 3 Full">
-                <p>Full Recipe 3 details here...</p>
+                <p>Ingredients: Quinoa, coconut milk, shredded coconut, maple syrup, cardamom.<br><br>Directions: Cook quinoa in coconut milk until fluffy. Stir in shredded coconut, maple syrup, and cardamom. Serve warm.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
