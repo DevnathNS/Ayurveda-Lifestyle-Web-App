@@ -36,8 +36,7 @@
             <div class="carousel-item active">
                 <img src="kapha_recipe1.jpg" class="d-block w-100" alt="Recipe 1">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Recipe 1 Title</h5>
-                    <p>Short description of Recipe 1</p>
+                    <h5>Spiced Chickpea Stew</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal1">
                         View Recipe
                     </button>
@@ -46,8 +45,7 @@
             <div class="carousel-item">
                 <img src="kapha_recipe2.jpg" class="d-block w-100" alt="Recipe 2">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Recipe 2 Title</h5>
-                    <p>Short description of Recipe 2</p>
+                    <h5>Stir-Fried Bitter Greens</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal2">
                         View Recipe
                     </button>
@@ -56,8 +54,7 @@
             <div class="carousel-item">
                 <img src="kapha_recipe3.jpg" class="d-block w-100" alt="Recipe 3">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Recipe 3 Title</h5>
-                    <p>Short description of Recipe 3</p>
+                    <h5>Ginger-Turmeric Tea</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal3">
                         View Recipe
                     </button>
@@ -86,7 +83,7 @@
             </div>
             <div class="modal-body">
                 <img src="kapha_recipe1.jpg" class="d-block mx-auto mb-3" alt="Recipe 1 Full">
-                <p>Full Recipe 1 details here...</p>
+                <p>Ingredients: Chickpeas, tomatoes, spinach, garlic, cumin, coriander, chili powder.<br><br>Directions: Simmer chickpeas, tomatoes, and spinach with garlic and spices until flavors meld. Serve hot.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -106,7 +103,7 @@
             </div>
             <div class="modal-body">
                 <img src="kapha_recipe2.jpg" class="d-block mx-auto mb-3" alt="Recipe 2 Full">
-                <p>Full Recipe 2 details here...</p>
+                <p>Ingredients: Kale, mustard greens, broccoli, ginger, tamari sauce.<br><br>Directions: Stir-fry chopped greens with ginger and tamari until tender-crisp. Serve as a side dish.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -126,7 +123,7 @@
             </div>
             <div class="modal-body">
                 <img src="kapha_recipe3.jpg" class="d-block mx-auto mb-3" alt="Recipe 3 Full">
-                <p>Full Recipe 3 details here...</p>
+                <p>Ingredients: Fresh ginger, turmeric, black pepper, honey.<br><br>Directions: Simmer grated ginger and turmeric in water for 10 minutes. Strain, add a pinch of black pepper and honey to taste.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
