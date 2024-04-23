@@ -12,7 +12,7 @@
         .carousel-item img {
             width: 100%;
             height: auto;
-            max-height: 400px; /* Adjust max-height as needed */
+            max-height: 400px;
             object-fit: cover;
         }
 
