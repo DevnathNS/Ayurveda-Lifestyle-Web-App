@@ -12,7 +12,7 @@
         .carousel-item img {
             width: 100%;
             height: auto;
-            max-height: 400px; /* Adjust max-height as needed */
+            max-height: 400px;
             object-fit: cover;
         }
 
@@ -36,7 +36,6 @@
             <div class="carousel-item active">
                 <img src="pitta_recipe1.jpg" class="d-block w-100" alt="Recipe 1">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Cucumber-Mint Raita</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal1">
                         View Recipe
                     </button>
@@ -45,7 +44,6 @@
             <div class="carousel-item">
                 <img src="pitta_recipe2.jpg" class="d-block w-100" alt="Recipe 2">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Watermelon Salad</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal2">
                         View Recipe
                     </button>
@@ -54,7 +52,6 @@
             <div class="carousel-item">
                 <img src="pitta_recipe3.jpg" class="d-block w-100" alt="Recipe 3">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Coconut-Curry Lentils</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal3">
                         View Recipe
                     </button>
@@ -76,7 +73,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="recipeModal1Label">Recipe 1</h5>
+                <h5 class="modal-title" id="recipeModal1Label">Cucumber-Mint Raita</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -96,7 +93,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="recipeModal2Label">Recipe 2</h5>
+                <h5 class="modal-title" id="recipeModal2Label">Watermelon Salad</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -116,7 +113,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="recipeModal3Label">Recipe 3</h5>
+                <h5 class="modal-title" id="recipeModal3Label">Coconut-Curry Lentils</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
