@@ -12,7 +12,7 @@
         .carousel-item img {
             width: 100%;
             height: auto;
-            max-height: 400px;
+            max-height: 400px; /* Adjust max-height as needed */
             object-fit: cover;
         }
 
@@ -36,8 +36,7 @@
             <div class="carousel-item active">
                 <img src="pitta_recipe1.jpg" class="d-block w-100" alt="Recipe 1">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Recipe 1 Title</h5>
-                    <p>Short description of Recipe 1</p>
+                    <h5>Cucumber-Mint Raita</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal1">
                         View Recipe
                     </button>
@@ -46,8 +45,7 @@
             <div class="carousel-item">
                 <img src="pitta_recipe2.jpg" class="d-block w-100" alt="Recipe 2">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Recipe 2 Title</h5>
-                    <p>Short description of Recipe 2</p>
+                    <h5>Watermelon Salad</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal2">
                         View Recipe
                     </button>
@@ -56,8 +54,7 @@
             <div class="carousel-item">
                 <img src="pitta_recipe3.jpg" class="d-block w-100" alt="Recipe 3">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Recipe 3 Title</h5>
-                    <p>Short description of Recipe 3</p>
+                    <h5>Coconut-Curry Lentils</h5>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#recipeModal3">
                         View Recipe
                     </button>
@@ -86,7 +83,7 @@
             </div>
             <div class="modal-body">
                 <img src="pitta_recipe1.jpg" class="d-block mx-auto mb-3" alt="Recipe 1 Full">
-                <p>Full Recipe 1 details here...</p>
+                <p>Ingredients: Yogurt, cucumber, fresh mint, cumin seeds, salt.<br><br>Directions: Grate cucumber and chop mint. Mix with yogurt, toasted cumin seeds, and a pinch of salt. Serve chilled.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -106,7 +103,7 @@
             </div>
             <div class="modal-body">
                 <img src="pitta_recipe2.jpg" class="d-block mx-auto mb-3" alt="Recipe 2 Full">
-                <p>Full Recipe 2 details here...</p>
+                <p>Ingredients: Watermelon cubes, feta cheese, fresh basil, lime juice, olive oil.<br><br>Directions: Toss watermelon cubes with crumbled feta, torn basil leaves, lime juice, and a drizzle of olive oil.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -126,7 +123,7 @@
             </div>
             <div class="modal-body">
                 <img src="pitta_recipe3.jpg" class="d-block mx-auto mb-3" alt="Recipe 3 Full">
-                <p>Full Recipe 3 details here...</p>
+                <p>Ingredients: Red lentils, coconut milk, curry powder, fresh cilantro, lime.<br><br>Directions: Cook lentils in coconut milk with curry powder until soft. Garnish with chopped cilantro and a squeeze of lime.</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
