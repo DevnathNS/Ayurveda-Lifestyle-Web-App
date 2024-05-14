@@ -46,16 +46,10 @@ if(isset($_POST['logout'])) {
                     <a class="nav-link" href="../user/recipe_repository.php">Recipe Repository</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../user/wellness_tracker.php">Wellness Tracker</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="../user/herbal_remedy_finder.php">Herbal Remedy Finder</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../user/mindfulness_resources.php">Mindfulness Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../user/community_forum.php">Community Forum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../user/educational_content.php">Educational Content</a>
