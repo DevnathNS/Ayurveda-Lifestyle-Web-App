@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['dosha'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Repository</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -107,15 +108,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['dosha'])) {
             <div class="dropdown-content">
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                     <input type="hidden" name="dosha" value="vata">
-                    <button type="submit">Vata</button>
+                    <button type="submit" class="btn btn-link">Vata</button>
                 </form>
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                     <input type="hidden" name="dosha" value="pitta">
-                    <button type="submit">Pitta</button>
+                    <button type="submit" class="btn btn-link">Pitta</button>
                 </form>
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                     <input type="hidden" name="dosha" value="kapha">
-                    <button type="submit">Kapha</button>
+                    <button type="submit" class="btn btn-link">Kapha</button>
                 </form>
             </div>
         </div>
