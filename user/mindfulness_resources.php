@@ -13,7 +13,7 @@
             padding: 20px;
         }
     </style>
-</head>https://github.com/DevnathNS/Ayurveda-Lifestyle-Web-App/blob/main/user/mindfulness_resources.php
+</head>
 <body>
     <div class="bg-container container mt-5">
         <div class="row">
