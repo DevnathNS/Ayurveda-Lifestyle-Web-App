@@ -1,5 +1,4 @@
 <?php
-
 include '../db_config.php';
 include '../session_start.php';
 
@@ -169,103 +168,55 @@ if ($current_question <= $total_questions) {
 <html>
 <head>
     <title>Dosha Quiz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .question {
-            margin-bottom: 20px;
-        }
-
-        .question p {
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .options label {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .options input[type="radio"] {
-            margin-right: 10px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #4caf50;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .dosha-result {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-    </style>
-    <script>
-        function validateForm() {
-            var options = document.getElementsByName("answer");
-            var isChecked = false;
-            for (var i = 0; i < options.length; i++) {
-                if (options[i].checked) {
-                    isChecked = true;
-                    break;
-                }
-            }
-            if (!isChecked) {
-                alert("Please select an option before moving to the next question.");
-                return false;
-            }
-            return true;
-        }
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container">
-    <?php if ($current_question <= $total_questions) : ?>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <input type="hidden" name="question_number" value="<?php echo $current_question + 1; ?>">
-            <div class="question">
-                <p>Question <?php echo $current_question; ?>:</p>
-                <p><?php echo $current_question_data['question']; ?></p>
+    <div class="container">
+        <?php if ($current_question <= $total_questions) : ?>
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="mt-5" onsubmit="return validateForm()">
+                <input type="hidden" name="question_number" value="<?php echo $current_question + 1; ?>">
+                <div class="question">
+                    <p class="h5">Question <?php echo $current_question; ?>:</p>
+                    <p class="lead"><?php echo $current_question_data['question']; ?></p>
+                </div>
+                <div class="options">
+                    <?php foreach ($current_question_data['options'] as $option => $text) : ?>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="answer" value="<?php echo $option; ?>" id="<?php echo $option; ?>">
+                            <label class="form-check-label" for="<?php echo $option; ?>">
+                                <?php echo $text; ?>
+                            </label>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Next Question</button>
+            </form>
+        <?php else : ?>
+            <div class="dosha-result mt-5">
+                <p class="h4">Your Dosha Type: <?php echo $dosha_type; ?></p>
+                <p><a href="../index.php" class="btn btn-secondary mt-3">Back to Dashboard</a></p>
             </div>
-            <div class="options">
-                <?php foreach ($current_question_data['options'] as $option => $text) : ?>
-                    <label>
-                        <input type="radio" name="answer" value="<?php echo $option; ?>">
-                        <?php echo $text; ?>
-                    </label>
-                <?php endforeach; ?>
-            </div>
-            <button type="submit">Next Question</button>
-        </form>
-    <?php else : ?>
-        <div class="dosha-result">
-            <p>Your Dosha Type: <?php echo $dosha_type; ?></p>
-            <p><a href="../index.php">Back to Dashboard</a></p>
-        </div>
-    <?php endif; ?>
-</div>
+        <?php endif; ?>
+    </div>
 </body>
 </html>
+
+<script>
+    function validateForm() {
+        var options = document.getElementsByName("answer");
+        var isChecked = false;
+        for (var i = 0; i < options.length; i++) {
+            if (options[i].checked) {
+                isChecked = true;
+                break;
+            }
+        }
+        if (!isChecked) {
+            alert("Please select an option before moving to the next question.");
+            return false;
+        }
+        return true;
+    }
+</script>
+
