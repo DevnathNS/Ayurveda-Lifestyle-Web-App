@@ -34,24 +34,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .register-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .register-container h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .register-container p {
+            text-align: center;
+            color: red;
+        }
+        .register-container .success-message {
+            color: green;
+        }
+    </style>
 </head>
 <body>
-    <div class="register-container">
-        <h2>Register</h2>
-        <?php if (isset($error)) { ?>
-            <p><?php echo $error; ?></p>
-        <?php } ?>
-        <?php if (isset($success_message)) { ?>
-            <p><?php echo $success_message; ?></p>
-        <?php } ?>
-        <form method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <button type="submit">Register</button>
-        </form>
-        <p>Already have an account? <a href="login.php">Login</a></p>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="register-container">
+                    <h2>Register</h2>
+                    <?php if (isset($error)) { ?>
+                        <p><?php echo $error; ?></p>
+                    <?php } ?>
+                    <?php if (isset($success_message)) { ?>
+                        <p class="success-message"><?php echo $success_message; ?></p>
+                    <?php } ?>
+                    <form method="post">
+                        <div class="form-group">
+                            <input type="text" name="username" class="form-control" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </form>
+                    <p>Already have an account? <a href="login.php">Login</a></p>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
