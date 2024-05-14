@@ -17,10 +17,18 @@ if(isset($_POST['logout'])) {
 <head>
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        .navbar-nav .nav-item .nav-link {
+            margin-right: 15px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -53,7 +61,7 @@ if(isset($_POST['logout'])) {
                     <a class="nav-link" href="../user/educational_content.php">Educational Content</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="manage_users.php">Manage Users</a> <!-- Added Manage Users section -->
+                    <a class="nav-link" href="manage_users.php">Manage Users</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="post">

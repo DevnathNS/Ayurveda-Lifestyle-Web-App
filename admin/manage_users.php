@@ -23,12 +23,21 @@ $result = mysqli_query($conn, $query);
 <head>
     <title>Manage Users</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Manage Users</h1>
-        <table class="table">
-            <thead>
+        <table class="table table-bordered table-hover">
+            <thead class="thead-light">
                 <tr>
                     <th>Username</th>
                     <th>Email</th>
