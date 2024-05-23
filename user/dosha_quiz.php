@@ -2,6 +2,20 @@
 include '../db_config.php';
 include '../session_start.php';
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $hashed_password = md5($password);
+
+    $query = "SELECT role FROM users WHERE username = '$username' AND password = '$hashed_password'";
+    $result = mysqli_query($conn, $query);
+
+    $row = mysqli_fetch_assoc($result);
+    $role = $row['role'];  
+}
+
+
 $questions = array(
     1 => array(
         'question' => 'Which of the following best describes your body frame?',
@@ -195,7 +209,11 @@ if ($current_question <= $total_questions) {
         <?php else : ?>
             <div class="dosha-result mt-5">
                 <p class="h4">Your Dosha Type: <?php echo $dosha_type; ?></p>
-                <p><a href="user_dashboard.php" class="btn btn-secondary mt-3">Back to Dashboard</a></p>
+                <p>
+                    <a href="<?php echo ($role == 'admin') ? '../admin/admin_dashboard.php' : 'user_dashboard.php'; ?>" class="btn btn-secondary mt-3">
+                        Back to Dashboard
+                    </a>
+                </p>
             </div>
         <?php endif; ?>
     </div>
@@ -219,4 +237,3 @@ if ($current_question <= $total_questions) {
         return true;
     }
 </script>
-
