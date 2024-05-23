@@ -195,7 +195,7 @@ if ($current_question <= $total_questions) {
         <?php else : ?>
             <div class="dosha-result mt-5">
                 <p class="h4">Your Dosha Type: <?php echo $dosha_type; ?></p>
-                <p><a href="../index.php" class="btn btn-secondary mt-3">Back to Dashboard</a></p>
+                <p><a href="user_dashboard.php" class="btn btn-secondary mt-3">Back to Dashboard</a></p>
             </div>
         <?php endif; ?>
     </div>
