@@ -11,6 +11,9 @@ require_once('session_start.php');
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <!-- <div class="bg-div">
+        <img class="bg" src="./public/images/bg.jpg" alt="bg">
+    </div> -->
     <div class="container">
         <h1 class="mt-5">Welcome to Ayurveda Lifestyle Web App</h1>
         <p class="mt-3">Please <a href="login.php">login</a> or <a href="register.php">register</a> to get started.</p>

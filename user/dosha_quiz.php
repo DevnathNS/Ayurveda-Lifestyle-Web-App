@@ -210,7 +210,7 @@ if ($current_question <= $total_questions) {
             <div class="dosha-result mt-5">
                 <p class="h4">Your Dosha Type: <?php echo $dosha_type; ?></p>
                 <p>
-                    <a href="<?php echo ($role == 'admin') ? '../admin/admin_dashboard.php' : 'user_dashboard.php'; ?>" class="btn btn-secondary mt-3">
+                    <a href="<?php echo ($role == 'admin') ? '../admin/Zadmin_dashboard.php' : 'user_dashboard.php'; ?>" class="btn btn-secondary mt-3">
                         Back to Dashboard
                     </a>
                 </p>
